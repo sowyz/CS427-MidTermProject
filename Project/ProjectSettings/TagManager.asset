@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Track
+    uniqueID: 2029969653
+    locked: 0
+  - name: Hull
+    uniqueID: 3763356471
+    locked: 0
+  - name: Gun
+    uniqueID: 2089451853
+    locked: 0
