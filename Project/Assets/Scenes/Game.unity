@@ -153,7 +153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 602664307}
+  m_Father: {fileID: 1272256153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &363693187
 SpriteRenderer:
@@ -263,8 +263,6 @@ Transform:
   m_Children:
   - {fileID: 1272256153}
   - {fileID: 950670752}
-  - {fileID: 2055914896}
-  - {fileID: 363693186}
   m_Father: {fileID: 763330559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &602664308
@@ -279,13 +277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681027175a9266446848e72382b759db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 602664310}
-  maxSpeed: 100
-  rotationSpeed: 25
-  turretRotationSpeed: 50
-  TrackLeft: {fileID: 2055914898}
-  TrackRight: {fileID: 363693188}
-  turretParent: {fileID: 950670752}
+  tankMover: {fileID: 0}
+  aimTurret: {fileID: 0}
+  turret: {fileID: 0}
 --- !u!70 &602664309
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -319,7 +313,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.5, y: 2.5}
+  m_Size: {x: 1.6, y: 2.5}
   m_Direction: 0
 --- !u!50 &602664310
 Rigidbody2D:
@@ -469,6 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950670752}
+  - component: {fileID: 950670753}
   m_Layer: 0
   m_Name: TurretParent
   m_TagString: Untagged
@@ -492,6 +487,19 @@ Transform:
   - {fileID: 1551326549}
   m_Father: {fileID: 602664307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950670753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950670751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7516bbcfb10131946af130711aa39113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretRotationSpeed: 75
 --- !u!1 &1163884847
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1272256153}
   - component: {fileID: 1272256154}
+  - component: {fileID: 1272256155}
   m_Layer: 0
   m_Name: Hull
   m_TagString: Untagged
@@ -613,7 +622,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2055914896}
+  - {fileID: 363693186}
   m_Father: {fileID: 602664307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1272256154
@@ -668,6 +679,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1272256155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272256152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7817626038a9a0645b6baa0ca90367d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
+  maxSpeed: 100
+  rotationSpeed: 50
+  TrackLeft: {fileID: 2055914898}
+  TrackRight: {fileID: 363693188}
 --- !u!1 &1551326548
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551326549}
   - component: {fileID: 1551326550}
+  - component: {fileID: 1551326551}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -752,6 +781,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1551326551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551326548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bad02fe1ba01b469d8af1ffae87e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055914895
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 602664307}
+  m_Father: {fileID: 1272256153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2055914897
 SpriteRenderer:
