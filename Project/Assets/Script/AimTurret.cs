@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AimTurret : MonoBehaviour
 {
-    public float turretRotationSpeed = 75;
+    public float turretRotationSpeed = 30;
 
     public void Aim(Vector2 inputPointerPosition)
     {

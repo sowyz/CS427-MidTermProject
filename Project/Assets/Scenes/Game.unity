@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516bbcfb10131946af130711aa39113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRotationSpeed: 75
+  turretRotationSpeed: 30
 --- !u!1 &1163884847
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,10 +692,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  maxSpeed: 100
-  rotationSpeed: 50
+  rotationSpeed: 40
   TrackLeft: {fileID: 2055914898}
   TrackRight: {fileID: 363693188}
+  maxSpeed: 70
+  acceleration: 35
+  deacceleration: 40
+  currentSpeed: 0
+  currentForwardDirection: 1
 --- !u!1 &1551326548
 GameObject:
   m_ObjectHideFlags: 0
