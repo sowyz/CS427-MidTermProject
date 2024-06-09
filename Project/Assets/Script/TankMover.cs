@@ -5,13 +5,13 @@ using UnityEngine;
 public class TankMover : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public float rotationSpeed = 40;
+    public float rotationSpeed = 60;
     public Animator TrackLeft, TrackRight;
     private Vector2 movementVector;
 
-    public float maxSpeed = 70;
-    public float acceleration = 35;
-    public float deacceleration = 40;
+    public float maxSpeed = 100;
+    public float acceleration = 55;
+    public float deacceleration = 60;
     public float currentSpeed = 0;
     public float currentForwardDirection = 1;
 
