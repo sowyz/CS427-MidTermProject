@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 20;
-    public int dng = 5;
+    public int dmg = 5;
     public float maxDistance = 30;
 
     private Vector2 startPosition;
@@ -40,6 +40,11 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Bullet hit: " + collision.name);
+        Damagable damagable = collision.GetComponent<Damagable>();
+        if (damagable != null)
+        {
+            damagable.Hit(dmg);
+        }
         DisableObject();
     }
 }
