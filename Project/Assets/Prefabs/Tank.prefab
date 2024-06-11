@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6225274843203731534}
   - component: {fileID: 5519596171022921120}
   - component: {fileID: 5118483980686540112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -531610825
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f079978216dd34444bb41c7a9ff779e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2900758356295968034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 3283240890381082156}
   - component: {fileID: 8201447389349215099}
   - component: {fileID: 2331115758500770231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,6 +287,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0c7f984804a2408a7c4409c41d2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4727552835615838655
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +312,7 @@ GameObject:
   - component: {fileID: 2044107230099615188}
   - component: {fileID: 594539634272852539}
   - component: {fileID: 6057242604670134998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Track_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +418,7 @@ GameObject:
   - component: {fileID: 4190649294726094813}
   - component: {fileID: 6272806020198823491}
   - component: {fileID: 5321073082759486487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Track_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4641530003042475980}
   - component: {fileID: 326604497727299203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TurretParent
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -556,7 +570,7 @@ GameObject:
   - component: {fileID: 5665089007746748326}
   - component: {fileID: 3502503522233678911}
   - component: {fileID: 5073901838837736322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +632,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2089451853
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e66cc38115c723a488e2c4f328aa7410, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
