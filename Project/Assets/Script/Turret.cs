@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(ObjectPool))]
 public class Turret : MonoBehaviour
 {
     public List<Transform> turretBarrels;
@@ -12,9 +14,19 @@ public class Turret : MonoBehaviour
     private Collider2D[] tankColliders;
     private float currentDelay = 0;
 
+    private ObjectPool bulletPool;
+    [SerializeField]
+    private int bulletPoolSize = 10;
+
     private void Awake()
     {
         tankColliders = GetComponentsInParent<Collider2D>();
+        bulletPool = GetComponent<ObjectPool>();
+    }
+
+    private void Start()
+    {
+        bulletPool.Initalize(bulletPrefab, bulletPoolSize);
     }
 
     private void Update()
@@ -38,7 +50,9 @@ public class Turret : MonoBehaviour
 
             foreach (Transform barrel in turretBarrels)
             {
-                GameObject bullet = Instantiate(bulletPrefab, barrel.position, barrel.rotation);
+                GameObject bullet = bulletPool.CreateObject();
+                bullet.transform.position = barrel.position;
+                bullet.transform.rotation = barrel.rotation;
                 bullet.GetComponent<Bullet>().Initalize();
                 foreach (Collider2D collider in tankColliders)
                 {

@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 3283240890381082156}
   - component: {fileID: 8201447389349215099}
   - component: {fileID: 2331115758500770231}
+  - component: {fileID: 6679154548849383185}
   m_Layer: 7
   m_Name: Tank
   m_TagString: Untagged
@@ -291,7 +292,19 @@ MonoBehaviour:
   currentHealth: 0
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6679154548849383185}
+        m_TargetAssemblyTypeName: DestroyUtil, Assembly-CSharp
+        m_MethodName: DestroyHelper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -301,6 +314,18 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6679154548849383185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681467813054367148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4727552835615838655
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +595,7 @@ GameObject:
   - component: {fileID: 5665089007746748326}
   - component: {fileID: 3502503522233678911}
   - component: {fileID: 5073901838837736322}
+  - component: {fileID: 1599276625502560227}
   m_Layer: 7
   m_Name: Turret
   m_TagString: Untagged
@@ -661,3 +687,19 @@ MonoBehaviour:
   - {fileID: 2900758356295968034}
   bulletPrefab: {fileID: 2258822670181543241, guid: 006edd8fc0fb23149a94678b18e87e5b, type: 3}
   reloadDelay: 1
+  bulletPoolSize: 10
+--- !u!114 &1599276625502560227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068376380361174093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03104f0a84f3e5e498d531c5cd61688d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 0}
+  poolSize: 10
+  spawnedObjectsParent: {fileID: 0}

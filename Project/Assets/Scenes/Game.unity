@@ -4601,13 +4601,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3681467813054367148, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076949610}
   m_SourcePrefab: {fileID: 100100000, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
 --- !u!1 &2076949603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3681467813054367148, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
   m_PrefabInstance: {fileID: 1433706102}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076949606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3283240890381082156, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+  m_PrefabInstance: {fileID: 1433706102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076949603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681027175a9266446848e72382b759db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2076949610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076949603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c26216aebdcf24d820f2f871b76990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2076949606}
+        m_TargetAssemblyTypeName: TankController, Assembly-CSharp
+        m_MethodName: HandleShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMoveBody:
+    m_PersistentCalls:
+      m_Calls: []
+  onMoveTurret:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2477330947194550687
 PrefabInstance:
   m_ObjectHideFlags: 0
