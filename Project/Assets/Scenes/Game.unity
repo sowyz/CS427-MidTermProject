@@ -4582,6 +4582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Obj
       objectReference: {fileID: 0}
+    - target: {fileID: 5118483980686540112, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bae80c9e02cae94487f214680c78a4a, type: 2}
     - target: {fileID: 5519596171022921120, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4716,6 +4720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank
       objectReference: {fileID: 0}
+    - target: {fileID: 5118483980686540112, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: d30897d4536046144b2315f6b80dc967, type: 2}
     - target: {fileID: 5665089007746748326, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5

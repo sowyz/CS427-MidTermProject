@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5568007267499944943}
   - component: {fileID: 4905030142188993887}
   m_Layer: 6
-  m_Name: Bullet
+  m_Name: MediumBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,6 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997b86cc4c7d7354d9c8852d6ef263c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  dmg: 100
-  maxDistance: 30
+  bulletData: {fileID: 11400000, guid: 076be23275498b14ebf895af1003675c, type: 2}

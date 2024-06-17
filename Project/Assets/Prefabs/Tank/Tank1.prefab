@@ -100,12 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  rotationSpeed: 60
   TrackLeft: {fileID: 6057242604670134998}
   TrackRight: {fileID: 5321073082759486487}
-  maxSpeed: 100
-  acceleration: 55
-  deacceleration: 60
+  movementData: {fileID: 0}
   currentSpeed: 0
   currentForwardDirection: 1
 --- !u!1 &1318438172174820858
@@ -155,7 +152,7 @@ GameObject:
   - component: {fileID: 2331115758500770231}
   - component: {fileID: 6679154548849383185}
   m_Layer: 7
-  m_Name: Tank
+  m_Name: Tank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,8 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretBarrels:
   - {fileID: 2900758356295968034}
-  bulletPrefab: {fileID: 2258822670181543241, guid: 006edd8fc0fb23149a94678b18e87e5b, type: 3}
-  reloadDelay: 1
+  turretData: {fileID: 11400000, guid: e4137e099098852478df89839de58b84, type: 2}
   bulletPoolSize: 10
 --- !u!114 &1599276625502560227
 MonoBehaviour:

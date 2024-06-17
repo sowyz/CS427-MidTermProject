@@ -5,13 +5,10 @@ using UnityEngine;
 public class TankMover : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public float rotationSpeed = 60;
     public Animator TrackLeft, TrackRight;
     private Vector2 movementVector;
 
-    public float maxSpeed = 100;
-    public float acceleration = 55;
-    public float deacceleration = 60;
+    public TankMovementData movementData;
     public float currentSpeed = 0;
     public float currentForwardDirection = 1;
 
@@ -44,8 +41,8 @@ public class TankMover : MonoBehaviour
     {
         if(Mathf.Abs(movementVector.y) > 0)
         {
-            currentSpeed += currentForwardDirection * acceleration * Time.deltaTime;
-            currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
+            currentSpeed += currentForwardDirection * movementData.acceleration * Time.deltaTime;
+            currentSpeed = Mathf.Clamp(currentSpeed, -movementData.maxSpeed, movementData.maxSpeed);
         }
         else
         {
@@ -56,19 +53,19 @@ public class TankMover : MonoBehaviour
             else if (currentSpeed < 0)
                 deaccelerationDir = 1;
 
-            currentSpeed += deaccelerationDir * deacceleration * Time.deltaTime; 
+            currentSpeed += deaccelerationDir * movementData.deacceleration * Time.deltaTime; 
 
             if (deaccelerationDir < 0)
-                currentSpeed = Mathf.Clamp(currentSpeed, 0 , maxSpeed);
+                currentSpeed = Mathf.Clamp(currentSpeed, 0 , movementData.maxSpeed);
             else 
-                currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, 0);
+                currentSpeed = Mathf.Clamp(currentSpeed, -movementData.maxSpeed, 0);
         }
     }
 
     private void FixedUpdate()
     {
         rb2d.velocity = (Vector2)transform.up * currentSpeed * Time.fixedDeltaTime;
-        rb2d.MoveRotation(transform.rotation * Quaternion.Euler(0, 0, -movementVector.x * rotationSpeed * Time.fixedDeltaTime));
+        rb2d.MoveRotation(transform.rotation * Quaternion.Euler(0, 0, -movementVector.x * movementData.rotationSpeed * Time.fixedDeltaTime));
         UpdateTrackAnimations();
     }
 }
