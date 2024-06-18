@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Bullet : MonoBehaviour
     private Vector2 startPosition;
     private float conquaredistance = 0;
     private Rigidbody2D rb2d;
+
+    public UnityEvent OnHit = new UnityEvent();
 
     private void Awake()
     {
@@ -38,6 +41,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Bullet hit: " + collision.name);
+        OnHit?.Invoke();
         Damagable damagable = collision.GetComponent<Damagable>();
         if (damagable != null)
         {
