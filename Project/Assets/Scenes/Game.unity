@@ -4582,6 +4582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Obj
       objectReference: {fileID: 0}
+    - target: {fileID: 4641530003042475980, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5118483980686540112, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: movementData
       value: 
@@ -4592,7 +4596,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 48ca6cdf64e98f14d8779f996bfc79af, type: 3}
     - target: {fileID: 5665089007746748326, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6272806020198823491, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: m_SortingLayer
