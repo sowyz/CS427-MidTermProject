@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1350051653264728980}
   - component: {fileID: 4373250553037812661}
   m_Layer: 6
-  m_Name: ImpactSound
+  m_Name: ExplosionSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,9 +43,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f02b50e59849e8c48b469a93ad1c87b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b3b4142bb415114fbf0b17c37c2a051, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

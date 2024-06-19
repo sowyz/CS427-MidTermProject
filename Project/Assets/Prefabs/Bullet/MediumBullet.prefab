@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1588021005349052722}
-  - component: {fileID: 3806559335240476724}
   - component: {fileID: 2392659107030468711}
+  - component: {fileID: 1180814441548938744}
   m_Layer: 6
   m_Name: ImpactFeedback
   m_TagString: Untagged
@@ -33,21 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8620656836222999861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3806559335240476724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717584565973809230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7977b4b9a44a47a42b74a5942bd7efe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 1472348981297545545, guid: b8ad78e385332c747850400fa720c0bf, type: 3}
-  bullet: {fileID: 4905030142188993887}
-  radius: 0.2
 --- !u!114 &2392659107030468711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +46,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 8789975135486226549, guid: e780077a57ffc1840b8240301960f509, type: 3}
+--- !u!114 &1180814441548938744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717584565973809230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a2d7ae14c78cb4dab64be50b050cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 1472348981297545545, guid: b8ad78e385332c747850400fa720c0bf, type: 3}
+  bullet: {fileID: 4905030142188993887}
+  radius: 0.2
 --- !u!1 &2258822670181543241
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3806559335240476724}
-        m_TargetAssemblyTypeName: ObjectGeneratorRandomPositionUtil, Assembly-CSharp
+      - m_Target: {fileID: 1180814441548938744}
+        m_TargetAssemblyTypeName: BulletImpactGeneratorRandomPositionUtil, Assembly-CSharp
         m_MethodName: CreateObject
         m_Mode: 1
         m_Arguments:
