@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TankMover : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class TankMover : MonoBehaviour
     public TankMovementData movementData;
     public float currentSpeed = 0;
     public float currentForwardDirection = 1;
+
+    public UnityEvent<float> onSpeedChange = new UnityEvent<float>();
 
     private void Awake()
     {
@@ -30,6 +34,7 @@ public class TankMover : MonoBehaviour
     {
         this.movementVector = movementVector;
         CalculateSpeed(movementVector);
+        onSpeedChange?.Invoke(this.movementVector.magnitude);
         if (movementVector.y > 0)
             currentForwardDirection = 1;
         if (movementVector.y < 0)
