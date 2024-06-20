@@ -15,8 +15,8 @@ TagManager:
   - Agent
   - Hittable
   - ObstacleMovement
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
