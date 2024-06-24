@@ -246,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 92441564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: 0.2, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3434,7 +3434,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3283240890381082156, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
   m_PrefabInstance: {fileID: 2477330947194550687}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1569297649}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 681027175a9266446848e72382b759db, type: 3}
@@ -3626,7 +3626,7 @@ Transform:
   m_GameObject: {fileID: 803644232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: -6.3, z: 0}
+  m_LocalPosition: {x: -3, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3772,7 +3772,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1163884850}
   - component: {fileID: 1163884849}
-  - component: {fileID: 1163884848}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3780,14 +3779,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1163884848
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163884847}
-  m_Enabled: 1
 --- !u!20 &1163884849
 Camera:
   m_ObjectHideFlags: 0
@@ -4808,6 +4799,19 @@ PrefabInstance:
       addedObject: {fileID: 235987911}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+--- !u!1 &1569297649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3681467813054367148, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+  m_PrefabInstance: {fileID: 2477330947194550687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &1569297650
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569297649}
+  m_Enabled: 1
 --- !u!4 &1742291730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6225274843203731534, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
@@ -4910,7 +4914,7 @@ Transform:
   m_GameObject: {fileID: 1899779524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: -0.6, z: 0}
+  m_LocalPosition: {x: 8.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5074,7 +5078,7 @@ Transform:
   m_GameObject: {fileID: 2109649457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 16.5, z: 0}
+  m_LocalPosition: {x: -18.73, y: 18.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5197,7 +5201,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3681467813054367148, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569297650}
   m_SourcePrefab: {fileID: 100100000, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
