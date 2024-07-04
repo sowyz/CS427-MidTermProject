@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2559b449ca5284749adf7f5f9c1d604c, type: 3}
+  m_Name: HeavylBulletTurret
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2258822670181543241, guid: a501b944cfc13ed49938352f54155a2d, type: 3}
+  reloadDelay: 1.5
+  bulletData: {fileID: 11400000, guid: 99e3fe82bae112e43be01e46607e7835, type: 2}

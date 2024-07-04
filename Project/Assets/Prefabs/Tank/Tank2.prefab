@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretBarrels:
   - {fileID: 2900758356295968034}
-  turretData: {fileID: 11400000, guid: e4137e099098852478df89839de58b84, type: 2}
+  turretData: {fileID: 11400000, guid: a03a1b58e3c58634ab24600e1f9452c9, type: 2}
   bulletPoolSize: 10
   OnShoot:
     m_PersistentCalls:
@@ -1477,5 +1477,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 0}
-  poolSize: 10
+  poolSize: 15
   spawnedObjectsParent: {fileID: 0}
