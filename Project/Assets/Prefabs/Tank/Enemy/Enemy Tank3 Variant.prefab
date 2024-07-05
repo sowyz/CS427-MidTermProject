@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Tank3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3681467813054367148, guid: de717f088e471e34da45e5f763e52155, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5118483980686540112, guid: de717f088e471e34da45e5f763e52155, type: 3}
       propertyPath: movementData
       value: 
