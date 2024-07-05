@@ -550,7 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &130390652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &242033229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,7 +1102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &274692184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12029,7 +12026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &512496108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12123,7 +12119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &532407260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12251,7 +12246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &579716460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13720,7 +13714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &832952775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13820,6 +13813,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1008842758}
     m_Modifications:
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnHeal.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1190792218}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnHeal.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: GameOverMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331115758500770231, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3031908919453603269, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -15127,7 +15156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1340035379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15277,7 +15305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1368585077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15402,7 +15429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1415782926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15648,7 +15674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1509459579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15954,7 +15979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1600719789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24982,7 +25006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &1895619935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26021,7 +26044,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d5bfa66d781ef4781f00f8c50714e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
 --- !u!114 &2067919577
 MonoBehaviour:
   m_ObjectHideFlags: 0
