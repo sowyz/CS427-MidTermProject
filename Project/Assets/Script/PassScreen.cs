@@ -13,15 +13,6 @@ public class PassScreen : MonoBehaviour
     }
     public void ShowWinGameLevelUI()
     {
-        //check if the current scene is the last scene
-        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
-        {
-            // If it is the last scene, move to the first scene
-            //SceneManager.LoadScene(0);
-            Debug.Log("You have completed the game!");
-            return;
-        }
-
         // Move to the next level
         WinGameLevelUI.SetActive(true);
         Debug.Log("You have passed the level!");        
