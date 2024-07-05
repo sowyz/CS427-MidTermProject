@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -531610825
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cf0f256cf148fd4bb050feabbdd150c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cc39ec88e2e4aa4e8bbb26f98f9b62c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 1318438172174820858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 2331115758500770231}
   - component: {fileID: 6679154548849383185}
   m_Layer: 7
-  m_Name: Tank2
+  m_Name: Tank3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.15, y: 2}
+  m_Size: {x: 1.7, y: 2.5}
   m_Direction: 0
 --- !u!114 &3283240890381082156
 MonoBehaviour:
@@ -574,8 +574,8 @@ Transform:
   m_GameObject: {fileID: 4727552835615838655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: -0.75, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8116530776440587164}
@@ -682,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 5764356509407037353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -800,8 +800,8 @@ Transform:
   m_GameObject: {fileID: 6927979155841533675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0.75, y: -0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3603648455548521772}
@@ -1086,7 +1086,7 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.3
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1170,7 +1170,7 @@ Transform:
   m_GameObject: {fileID: 8478753330334803491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1268,7 +1268,7 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.3
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1404,7 +1404,7 @@ SpriteRenderer:
   m_SortingLayerID: 2089451853
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33b6e7c450fd30b4683c0bb722bf6e53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7627acba039d74343ba47d504049fdc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretBarrels:
   - {fileID: 2900758356295968034}
-  turretData: {fileID: 11400000, guid: a03a1b58e3c58634ab24600e1f9452c9, type: 2}
+  turretData: {fileID: 11400000, guid: 1f4d675eeb9dc8f46b3560f319d0ee20, type: 2}
   bulletPoolSize: 10
   OnShoot:
     m_PersistentCalls:
@@ -1477,5 +1477,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 0}
-  poolSize: 15
+  poolSize: 10
   spawnedObjectsParent: {fileID: 0}
