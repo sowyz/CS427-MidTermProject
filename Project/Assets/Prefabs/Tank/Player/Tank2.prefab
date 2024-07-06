@@ -103,7 +103,7 @@ MonoBehaviour:
   rb2d: {fileID: 0}
   TrackLeft: {fileID: 6057242604670134998}
   TrackRight: {fileID: 5321073082759486487}
-  movementData: {fileID: 0}
+  movementData: {fileID: 11400000, guid: ad60784471b21a54fb8c5e6719d227e5, type: 2}
   currentSpeed: 0
   currentForwardDirection: 1
   onSpeedChange:
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0c7f984804a2408a7c4409c41d2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 180
   currentHealth: 0
   OnDeath:
     m_PersistentCalls:
