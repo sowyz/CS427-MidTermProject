@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aef80a8b69a3f64ea2e9e13acbbf38a, type: 3}
-  m_Name: SniperBullet
+  m_Script: {fileID: 11500000, guid: e1933b1c76853e041b738141909e7bf2, type: 3}
+  m_Name: Tank2
   m_EditorClassIdentifier: 
-  speed: 30
-  dmg: 30
-  maxDistance: 50
+  maxSpeed: 150
+  acceleration: 110
+  deacceleration: 100
+  rotationSpeed: 90

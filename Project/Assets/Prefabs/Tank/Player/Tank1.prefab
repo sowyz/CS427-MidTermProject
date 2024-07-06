@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516bbcfb10131946af130711aa39113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRotationSpeed: 50
+  turretRotationSpeed: 90
 --- !u!1 &8987443122980081687
 GameObject:
   m_ObjectHideFlags: 0
