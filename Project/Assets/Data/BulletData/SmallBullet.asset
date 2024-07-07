@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aef80a8b69a3f64ea2e9e13acbbf38a, type: 3}
   m_Name: SmallBullet
   m_EditorClassIdentifier: 
-  speed: 22.5
+  speed: 15
   dmg: 10
-  maxDistance: 8
+  maxDistance: 10
