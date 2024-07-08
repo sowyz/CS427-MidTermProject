@@ -5,7 +5,7 @@ public class StartMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Select Tank");
     }
 
     public void Quit()
