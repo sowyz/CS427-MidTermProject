@@ -6,12 +6,15 @@
 + Lê Trường Thọ - 21125158
 ## 2. Main content of game
 ### A. Brief introduction
-Tank 2D is a top-down shooter game where you, the player, control various tanks, shoot down enemies and discover the secret behind the sceen. Currently, the game has only a single player mode with two stages
-### B. Basic instruction
-Tank 2D is around tank battle. First, the player choose a tank. The choice is not pernament, so anyone exploring what each tank do with no risk. To the latest patch, Tank 2D consist of two stages, each has different objective to be achive to be accomplished successfully, but mostly around shooting down your enemy's tanks.
+Tank 2D is a top-down shooter game where you, the player, control various tanks, shoot down enemies and discover the secret behind the scene. Currently, the game has only a single player mode with two stages
 
-Tank 2D controls including W, A, S, D, the cursor, and left mouse. The first four is for movement control while you aim with the cursor and shoot with left mouse. The comtrols seem simple, yet have been tune so that it give the experience of controlling a strong heavy tank that might be a bit challenging at first, but hopefully, sastifying when mastered.
+### B. Basic instruction
+Tank 2D is around tank battles. First, the player chooses a tank. The choice is not permanent, so anyone exploring what each tank does with no risk. To the latest patch, Tank 2D consists of two stages, each has a different objective to be accomplished successfully, but mostly around shooting down your enemy's tanks.
+
+Tank 2D controls including W, A, S, D, the cursor, and left mouse. The first four are for movement control while you aim with the cursor and shoot with the left mouse. The controls seem simple, yet have been tuned so that it gives the experience of controlling a strong heavy tank that might be a bit challenging at first, but hopefully, satisfying when mastered.
+
 ### C. Application
+Tank 2D is a game made for entertainment and published for education purpose.
 
 ## 3. Project Configuration
 The entier game is built on Unity 2022.3.29f1
