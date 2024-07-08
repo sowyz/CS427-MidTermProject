@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997b86cc4c7d7354d9c8852d6ef263c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletData: {fileID: 11400000, guid: 076be23275498b14ebf895af1003675c, type: 2}
+  bulletData: {fileID: 11400000, guid: 99e3fe82bae112e43be01e46607e7835, type: 2}
   OnHit:
     m_PersistentCalls:
       m_Calls:

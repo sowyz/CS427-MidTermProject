@@ -7,20 +7,20 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
     private Camera mainCamera;
+    private Cinemachine.CinemachineVirtualCamera vcam;
 
     public UnityEvent onShoot = new UnityEvent();
     public UnityEvent<Vector2> onMoveBody = new UnityEvent<Vector2>();
     public UnityEvent<Vector2> onMoveTurret = new UnityEvent<Vector2>();
 
-    // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
-        if (mainCamera == null) {
+        if (mainCamera == null)
+        {
             mainCamera = Camera.main;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         GetBodyMovement();
@@ -55,4 +55,35 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    public void OnTankChanged(GameObject newTank)
+    {
+        Debug.Log("OnTankChanged called.");
+        onMoveBody.RemoveAllListeners();
+        onMoveTurret.RemoveAllListeners();
+        onShoot.RemoveAllListeners();
+
+        if (newTank != null)
+        {
+            Debug.Log("Adding listeners for new tank.");
+            TankController newTankController = newTank.GetComponent<TankController>();
+            onMoveBody.AddListener(newTankController.HandleMoveBody);
+            onMoveTurret.AddListener(newTankController.HandleTurretMovement);
+            onShoot.AddListener(newTankController.HandleShoot);
+
+            vcam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+            if (vcam != null)
+            {
+                vcam.Follow = newTank.transform;
+                vcam.LookAt = newTank.transform;
+            }
+            else
+            {
+                Debug.LogError("CinemachineVirtualCamera not found.");
+            }
+        }
+        else
+        {
+            Debug.LogError("NewTank is null.");
+        }
+    }
 }
