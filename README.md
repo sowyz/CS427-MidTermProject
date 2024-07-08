@@ -16,5 +16,6 @@ Tank 2D controls including W, A, S, D, the cursor, and left mouse. The first fou
 ## 3. Project Configuration
 The entier game is built on Unity 2022.3.29f1
 ## Resource reference
-### 
+### https://craftpix.net/freebies/free-2d-battle-tank-game-assets/
+### https://www.kenney.nl/assets/top-down-tanks-redux
 
