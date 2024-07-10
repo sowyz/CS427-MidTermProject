@@ -2319,10 +2319,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4575443687113090828, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5020545039719813159, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2415,10 +2411,6 @@ PrefabInstance:
       propertyPath: WinGameLevelUI
       value: 
       objectReference: {fileID: 1113832925}
-    - target: {fileID: 9035376526195899888, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 345255971732939354, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
