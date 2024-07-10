@@ -2287,6 +2287,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800435153817979305, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969501347993493155, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969501347993493155, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6004852349401564463, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
       propertyPath: m_LocalPosition.x
       value: 689.3868
@@ -2327,6 +2359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7293614792037183507, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
+      propertyPath: vcam
+      value: 
+      objectReference: {fileID: 1756567514}
     - target: {fileID: 7293614792037183507, guid: 2664ed16cb9bc244bad2981e6eb66849, type: 3}
       propertyPath: Player
       value: 

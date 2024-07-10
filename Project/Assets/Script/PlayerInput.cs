@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
     private Camera mainCamera;
-    private Cinemachine.CinemachineVirtualCamera vcam;
 
     public UnityEvent onShoot = new UnityEvent();
     public UnityEvent<Vector2> onMoveBody = new UnityEvent<Vector2>();
@@ -69,17 +69,6 @@ public class PlayerInput : MonoBehaviour
             onMoveBody.AddListener(newTankController.HandleMoveBody);
             onMoveTurret.AddListener(newTankController.HandleTurretMovement);
             onShoot.AddListener(newTankController.HandleShoot);
-
-            vcam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
-            if (vcam != null)
-            {
-                vcam.Follow = newTank.transform;
-                vcam.LookAt = newTank.transform;
-            }
-            else
-            {
-                Debug.LogError("CinemachineVirtualCamera not found.");
-            }
         }
         else
         {

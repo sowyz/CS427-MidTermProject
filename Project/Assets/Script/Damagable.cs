@@ -8,7 +8,9 @@ public class Damagable : MonoBehaviour
     public int maxHealth = 100;
     [SerializeField] 
     private int currentHealth;
-
+    public UnityEvent OnDeath;
+    public UnityEvent<float> OnHealthChanged;
+    public UnityEvent OnHit, OnHeal;
     public int CurrentHealth
     {
         get { return currentHealth; }
@@ -18,11 +20,6 @@ public class Damagable : MonoBehaviour
             OnHealthChanged?.Invoke((float)currentHealth / maxHealth); 
         }
     }
-
-    public UnityEvent OnDeath;
-    public UnityEvent<float> OnHealthChanged;
-    public UnityEvent OnHit, OnHeal;
-
     private void Start()
     {
         CurrentHealth = maxHealth;
