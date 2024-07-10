@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0c7f984804a2408a7c4409c41d2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 220
+  maxHealth: 350
   currentHealth: 0
   OnDeath:
     m_PersistentCalls:

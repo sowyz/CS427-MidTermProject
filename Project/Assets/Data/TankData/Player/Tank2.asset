@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1933b1c76853e041b738141909e7bf2, type: 3}
   m_Name: Tank2
   m_EditorClassIdentifier: 
-  maxSpeed: 170
-  acceleration: 120
-  deacceleration: 100
+  maxSpeed: 180
+  acceleration: 130
+  deacceleration: 120
   rotationSpeed: 90

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SniperBullet
   m_EditorClassIdentifier: 
   speed: 20
-  dmg: 30
+  dmg: 35
   maxDistance: 15

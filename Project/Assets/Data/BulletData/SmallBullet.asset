@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SmallBullet
   m_EditorClassIdentifier: 
   speed: 15
-  dmg: 10
+  dmg: 15
   maxDistance: 10

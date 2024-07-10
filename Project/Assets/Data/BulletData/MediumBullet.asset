@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MediumBullet
   m_EditorClassIdentifier: 
   speed: 13
-  dmg: 15
+  dmg: 20
   maxDistance: 10
