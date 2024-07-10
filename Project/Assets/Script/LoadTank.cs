@@ -10,7 +10,7 @@ public class LoadTank : MonoBehaviour
     public GameObject Player;
     public UnityEvent<GameObject> onTankChanged;
     public GameObject healthUI;
-    public Slider healthBar;
+    public Slider healthBar, reloadIndactor;
     public Cinemachine.CinemachineVirtualCamera vcam;
 
     private void Start()
@@ -38,6 +38,12 @@ public class LoadTank : MonoBehaviour
                     Destroy(healthUI);
                     gameOverMenu.GameOver();
                 });
+
+                Turret turret = tank.GetComponentInChildren<Turret>();
+                turret.OnReloading.AddListener(currentDelay => reloadIndactor.value = currentDelay);
+
+                UIFollowTank uiFollowTank = Player.GetComponentInChildren<UIFollowTank>();
+                uiFollowTank.toFollow = tank.transform;
 
                 vcam.Follow = tank.transform;
                 vcam.LookAt = tank.transform;

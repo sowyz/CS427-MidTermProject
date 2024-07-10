@@ -37,9 +37,9 @@ public class Turret : MonoBehaviour
     {
         if (!canShoot)
         {
-            currentDelay += Time.deltaTime;
-            OnReloading?.Invoke(currentDelay);
-            if (currentDelay >= turretData.reloadDelay)
+            currentDelay -= Time.deltaTime;
+            OnReloading?.Invoke(currentDelay / turretData.reloadDelay);
+            if (currentDelay <= 0)
             {
                 canShoot = true;
             }
@@ -51,7 +51,7 @@ public class Turret : MonoBehaviour
         if (canShoot)
         {
             canShoot = false;
-            currentDelay = 0;
+            currentDelay = turretData.reloadDelay;
 
             foreach (Transform barrel in turretBarrels)
             {
@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
             }
 
             OnShoot?.Invoke();
-            OnReloading?.Invoke(currentDelay);
+            OnReloading?.Invoke(currentDelay / turretData.reloadDelay);
         }
         else
         {

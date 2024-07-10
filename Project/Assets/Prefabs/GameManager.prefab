@@ -179,6 +179,7 @@ MonoBehaviour:
         m_CallState: 2
   healthUI: {fileID: 6453625470665437242}
   healthBar: {fileID: 4949166394296309715}
+  reloadIndactor: {fileID: 0}
   vcam: {fileID: 0}
 --- !u!114 &1485109493258017215
 MonoBehaviour:
@@ -2977,7 +2978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2414887022137830649
 RectTransform:
   m_ObjectHideFlags: 0
