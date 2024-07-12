@@ -7,7 +7,9 @@ using UnityEngine.UIElements;
 public class ShootBehavior : AIBehavior
 {
     public float fieldOfVision = 60f;
-    public float spacing = 10f;
+
+    [Range(1, 15)] 
+    public float spacing = 9f;
 
     public override void performAction(TankController tank, Transform target)
     {
@@ -30,6 +32,7 @@ public class ShootBehavior : AIBehavior
                 tank.HandleMoveBody(Vector2.up);
             }
         }
+        else tank.HandleMoveBody(Vector2.zero);
         tank.HandleTurretMovement(target.position);
     }
 

@@ -21,6 +21,9 @@ public class AIDetector : MonoBehaviour
     [SerializeField]
     private LayerMask visibilityLayer;
 
+    [SerializeField]
+    private float delayTime = 0.1f;
+
     public Transform Target
     {
         get => target;
@@ -42,6 +45,11 @@ public class AIDetector : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, collider.transform.position - transform.position, viewRadius, visibilityLayer);
                 if (hit.collider != null && (playerLayerMask & (1 << hit.collider.gameObject.layer)) != 0)
                 {
+                    float time = delayTime;
+                    while (time > 0)
+                    {
+                        time -= Time.deltaTime;
+                    }
                     target = hit.collider.transform;
                 }
             }
