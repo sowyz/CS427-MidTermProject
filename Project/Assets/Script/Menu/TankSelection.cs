@@ -25,6 +25,7 @@ public class TankSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedTank", selectedTank);
-        SceneManager.LoadScene("Scene1");
+        // SceneManager.LoadScene("Scene1");
+        GameManager.Instance.LoadLevel();
     }
 }

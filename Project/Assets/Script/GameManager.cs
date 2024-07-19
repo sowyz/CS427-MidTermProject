@@ -5,13 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     public GameObject player;
     public SaveSystem saveSystem;
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         SceneManager.sceneLoaded += Initialize;
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Initialize(Scene scene, LoadSceneMode sceneMode)
