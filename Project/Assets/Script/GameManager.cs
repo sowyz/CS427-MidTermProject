@@ -39,11 +39,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SaveData();
+            LoadMainMenu();
+        }
+    }
+
     public void LoadLevel()
     {
         if (saveSystem.LoadedData != null)
         {
-            SceneManager.LoadScene(saveSystem.LoadedData.sceneIndex);
+            int sceneIndex = saveSystem.LoadedData.sceneIndex;
+            if (IsValidSceneIndex(sceneIndex))
+            {
+                SceneManager.LoadScene(sceneIndex);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
             return;
         }
         LoadNextLevel();
@@ -51,12 +68,38 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (IsValidSceneIndex(nextSceneIndex))
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void SaveData()
     {
         if (player != null)
-            saveSystem.SaveData(SceneManager.GetActiveScene().buildIndex + 1, player.GetComponentInChildren<Damagable>().CurrentHealth);
+        {
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            saveSystem.SaveData(sceneIndex, player.GetComponentInChildren<Damagable>().CurrentHealth);
+        }
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ResetData()
+    {
+        saveSystem.ResetData();
+    }
+
+    private bool IsValidSceneIndex(int sceneIndex)
+    {
+        return sceneIndex >= 0 && sceneIndex <= 3;
     }
 }

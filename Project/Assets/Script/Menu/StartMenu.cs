@@ -8,6 +8,18 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("Select Tank");
     }
 
+    public void ContinueGame()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.LoadLevel();
+        }
+        else
+        {
+            Debug.LogError("GameManager instance not found.");
+        }
+    }
+
     public void Quit()
     {
         Application.Quit();

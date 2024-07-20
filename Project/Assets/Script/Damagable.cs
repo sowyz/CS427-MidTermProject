@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Damagable : MonoBehaviour
 {
     public int maxHealth = 100;
-    [SerializeField] 
+    [SerializeField]
     private int currentHealth;
     public UnityEvent OnDeath;
     public UnityEvent<float> OnHealthChanged;
@@ -14,16 +14,16 @@ public class Damagable : MonoBehaviour
     public int CurrentHealth
     {
         get { return currentHealth; }
-        set 
-        { 
+        set
+        {
             currentHealth = value;
-            OnHealthChanged?.Invoke((float)currentHealth / maxHealth); 
+            OnHealthChanged?.Invoke((float)currentHealth / maxHealth);
         }
     }
     private void Start()
     {
-        CurrentHealth = maxHealth;
-    }  
+        CurrentHealth = PlayerPrefs.GetInt("PlayerHealth", maxHealth);
+    }
 
     internal void Hit(int damage)
     {
@@ -36,7 +36,7 @@ public class Damagable : MonoBehaviour
         {
             OnHit?.Invoke();
         }
-    } 
+    }
 
     public void Heal(int healAmount)
     {

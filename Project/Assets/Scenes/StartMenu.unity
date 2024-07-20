@@ -401,9 +401,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1183837281}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1511149253}
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: ContinueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

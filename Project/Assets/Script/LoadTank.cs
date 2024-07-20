@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class LoadTank : MonoBehaviour
 {
@@ -13,13 +14,19 @@ public class LoadTank : MonoBehaviour
     public Slider healthBar, reloadIndactor;
     public Cinemachine.CinemachineVirtualCamera vcam;
 
-    private void Start()
+    private void Awake()
     {
-        onTankChanged = new UnityEvent<GameObject>();
-    }
+        if (onTankChanged == null)
+        {
+            onTankChanged = new UnityEvent<GameObject>();
+        }
 
-    public void Awake()
-    {
+        if (Player == null)
+        {
+            Debug.LogError("Player is not assigned.");
+            return;
+        }
+
         int selectedTank = PlayerPrefs.GetInt("selectedTank", 0);
         if (selectedTank >= 0 && selectedTank < tankPrefabs.Length)
         {
@@ -31,28 +38,54 @@ public class LoadTank : MonoBehaviour
                 tank.transform.SetParent(Player.transform);
 
                 Damagable damagable = tank.GetComponent<Damagable>();
-                damagable.OnHealthChanged.AddListener(health => healthBar.value = health);
-                GameOverMenu gameOverMenu = FindObjectOfType<GameOverMenu>();
-                damagable.OnDeath.AddListener(() =>
+                if (damagable != null)
                 {
-                    Destroy(healthUI);
-                    gameOverMenu.GameOver();
-                });
+                    int savedHealth = PlayerPrefs.GetInt("PlayerHealth", damagable.maxHealth);
+                    damagable.CurrentHealth = savedHealth;
+                    healthBar.value = (float)damagable.CurrentHealth / damagable.maxHealth;
+                    Debug.Log($"Loaded data: Health = {savedHealth}");
 
-                Turret turret = tank.GetComponentInChildren<Turret>();
-                turret.OnReloading.AddListener(currentDelay => reloadIndactor.value = currentDelay);
+                    damagable.OnHealthChanged.AddListener(health =>
+                    {
+                        healthBar.value = (float)health;
+                    });
 
-                UIFollowTank uiFollowTank = Player.GetComponentInChildren<UIFollowTank>();
-                uiFollowTank.toFollow = tank.transform;
+                    GameOverMenu gameOverMenu = FindObjectOfType<GameOverMenu>();
+                    damagable.OnDeath.AddListener(() =>
+                    {
+                        Destroy(healthUI);
+                        gameOverMenu.GameOver();
+                    });
 
-                vcam.Follow = tank.transform;
-                vcam.LookAt = tank.transform;
-                onTankChanged?.Invoke(tank);
+                    Turret turret = tank.GetComponentInChildren<Turret>();
+                    if (turret != null)
+                    {
+                        turret.OnReloading.AddListener(currentDelay => reloadIndactor.value = currentDelay);
+                    }
+
+                    UIFollowTank uiFollowTank = Player.GetComponentInChildren<UIFollowTank>();
+                    if (uiFollowTank != null)
+                    {
+                        uiFollowTank.toFollow = tank.transform;
+                    }
+
+                    if (vcam != null)
+                    {
+                        vcam.Follow = tank.transform;
+                        vcam.LookAt = tank.transform;
+                    }
+
+                    onTankChanged?.Invoke(tank);
+                }
+                else
+                {
+                    Debug.LogError("Damagable not found.");
+                }
             }
         }
         else
         {
-            Debug.LogError("Selected tank index is out of range.");
+            Debug.LogError("Tank index is out of range.");
         }
     }
 }
