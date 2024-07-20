@@ -22,7 +22,10 @@ public class Damagable : MonoBehaviour
     }
     private void Start()
     {
-        CurrentHealth = PlayerPrefs.GetInt("PlayerHealth", maxHealth);
+        //Save health
+        // CurrentHealth = PlayerPrefs.GetInt("PlayerHealth", maxHealth);
+
+        CurrentHealth = maxHealth;
     }
 
     internal void Hit(int damage)

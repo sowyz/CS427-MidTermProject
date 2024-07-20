@@ -40,11 +40,6 @@ public class LoadTank : MonoBehaviour
                 Damagable damagable = tank.GetComponent<Damagable>();
                 if (damagable != null)
                 {
-                    int savedHealth = PlayerPrefs.GetInt("PlayerHealth", damagable.maxHealth);
-                    damagable.CurrentHealth = savedHealth;
-                    healthBar.value = (float)damagable.CurrentHealth / damagable.maxHealth;
-                    Debug.Log($"Loaded data: Health = {savedHealth}");
-
                     damagable.OnHealthChanged.AddListener(health =>
                     {
                         healthBar.value = (float)health;
