@@ -8,12 +8,14 @@ public class PassScreen : MonoBehaviour
     public GameObject WinGameLevelUI;
     void GameOver()
     {
+        Time.timeScale = 0f;
         WinGameLevelUI.SetActive(true);
         Debug.Log("Game Over");
     }
     public void ShowWinGameLevelUI()
     {
         // Move to the next level
+        Time.timeScale = 0f;
         WinGameLevelUI.SetActive(true);
         Debug.Log("You have passed the level!");        
     }
