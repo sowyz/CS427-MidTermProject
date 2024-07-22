@@ -9,7 +9,7 @@
 Tank 2D is a top-down shooter game where you, the player, control various tanks, shoot down enemies and discover the secret behind the scene. Currently, the game has only a single player mode with two stages
 
 ### B. Basic instruction
-Tank 2D is around tank battles. First, the player chooses a tank. The choice is not permanent, so anyone exploring what each tank does with no risk. To the latest patch, Tank 2D consists of two stages, each has a different objective to be accomplished successfully, but mostly around shooting down your enemy's tanks.
+Tank 2D is around tank battles. First, the player chooses a tank. The choice is not permanent, so anyone exploring what each tank does with no risk. In the latest patch, Tank 2D comprises two stages, each with distinct objectives to achieve success, primarily centered on destroying enemy tanks. All stages feature a boss encounter where the objective is to defeat it to progress, without any explicit hints provided, encouraging players to rely on their experience and intuition to locate and engage the boss effectively.
 
 Tank 2D controls including W, A, S, D, the cursor, and left mouse. The first four are for movement control while you aim with the cursor and shoot with the left mouse. The controls seem simple, yet have been tuned so that it gives the experience of controlling a strong heavy tank that might be a bit challenging at first, but hopefully, satisfying when mastered.
 

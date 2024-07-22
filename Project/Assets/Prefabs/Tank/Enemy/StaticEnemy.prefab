@@ -194,7 +194,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 0
   m_TargetGraphic: {fileID: 4148868160359602933}
-  m_FillRect: {fileID: 4112900222091335158}
+  m_FillRect: {fileID: 4060950511546912109}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfVision: 60
-  spacing: 1
+  spacing: 9
 --- !u!114 &7149714734167943106
 MonoBehaviour:
   m_ObjectHideFlags: 0
