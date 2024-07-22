@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfVision: 60
-  spacing: 0.5
+  spacing: 1
 --- !u!114 &7149714734167943106
 MonoBehaviour:
   m_ObjectHideFlags: 0

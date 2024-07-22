@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2559b449ca5284749adf7f5f9c1d604c, type: 3}
-  m_Name: HeavylBulletTurret
+  m_Name: SlowHeavyBulletTurret
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2258822670181543241, guid: a501b944cfc13ed49938352f54155a2d, type: 3}
-  reloadDelay: 1.5
-  bulletData: {fileID: 11400000, guid: 99e3fe82bae112e43be01e46607e7835, type: 2}
+  reloadDelay: 1.75
+  bulletData: {fileID: 11400000, guid: 780b59070f765c04183f8939d2bba279, type: 2}

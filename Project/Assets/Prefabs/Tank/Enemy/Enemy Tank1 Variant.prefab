@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5073901838837736322, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
+      propertyPath: turretData
+      value: 
+      objectReference: {fileID: 11400000, guid: 074a5661165c3e749bad9bca2c722097, type: 2}
     - target: {fileID: 5118483980686540112, guid: 2c6cecb93b5cbd7488b3a9ecf1fc8ef7, type: 3}
       propertyPath: movementData
       value: 
